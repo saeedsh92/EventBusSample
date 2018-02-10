@@ -1,14 +1,15 @@
 package com.ss.eventbussample;
 
-import android.support.design.widget.FloatingActionButton;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
+import android.view.KeyEvent;
 import android.view.View;
-import android.widget.Button;
+import android.view.inputmethod.EditorInfo;
 import android.widget.EditText;
+import android.widget.TextView;
 
 import java.util.Calendar;
 
@@ -34,6 +35,16 @@ public class ChatActivity extends BaseActivity {
         messageAdapter=new MessageAdapter(this);
         messageRv.setAdapter(messageAdapter);
         messageEt= (EditText) findViewById(R.id.et_chat_inputMessage);
+        messageEt.setOnEditorActionListener(new TextView.OnEditorActionListener() {
+            @Override
+            public boolean onEditorAction(TextView textView, int i, KeyEvent keyEvent) {
+                if (i == EditorInfo.IME_ACTION_SEND) {
+                    sendButton.performClick();
+                    return true;
+                }
+                return false;
+            }
+        });
         sendButton= (FloatingActionButton) findViewById(R.id.fab_chat_sendMessage);
         sendButton.setOnClickListener(new View.OnClickListener() {
             @Override

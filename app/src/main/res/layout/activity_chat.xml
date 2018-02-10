@@ -71,7 +71,10 @@
                     android:layout_height="wrap_content"
                     android:background="@null"
                     android:hint="Write a message..."
+                    android:imeOptions="actionSend"
+                    android:maxLines="1"
                     android:padding="14dp"
+                    android:singleLine="true"
                     android:textSize="14sp" />
             </android.support.v7.widget.CardView>
         </RelativeLayout>
