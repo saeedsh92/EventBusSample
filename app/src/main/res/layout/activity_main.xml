@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.ss.eventbussample.MainActivity">
+
+    <Button
+        android:id="@+id/button_main_startConversation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:background="@drawable/background_button"
+        android:drawablePadding="4dp"
+        android:drawableRight="@drawable/ic_chat_bubble_outline_white_24dp"
+        android:paddingEnd="16dp"
+        android:paddingStart="16dp"
+        android:text="Start New Conversation"
+        android:textColor="@android:color/white"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/tv_main"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/button_main_startConversation"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="24dp"
+        android:gravity="center"
+        android:paddingEnd="36dp"
+        android:paddingStart="36dp"
+        android:text="demonstrate different features of eventbus with a messaging app sample. by s.shahini"
+        android:textSize="12sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/tv_main"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="8dp"
+        android:drawablePadding="4dp"
+        android:drawableRight="@drawable/github_circle"
+        android:gravity="center_vertical"
+        android:text="EventBus Sample"
+        android:textColor="@android:color/black"
+        android:textSize="22sp" />
+
+</RelativeLayout>
