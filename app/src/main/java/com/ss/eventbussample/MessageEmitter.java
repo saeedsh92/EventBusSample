@@ -1,5 +1,7 @@
 package com.ss.eventbussample;
 
+import org.greenrobot.eventbus.EventBus;
+
 import java.util.ArrayDeque;
 import java.util.Calendar;
 import java.util.Queue;
@@ -34,7 +36,7 @@ public class MessageEmitter {
                 message.setFullName("Jake wharton");
                 message.setContent(messageContent);
                 message.setDate(Calendar.getInstance().getTime().toString());
-                // TODO: 2/10/18 Send message using eventbus
+                EventBus.getDefault().postSticky(message);
             }
         }, 2000, 6000);
     }
